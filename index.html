@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HiQ-Crawl — Anonymous Project Page</title>
+  <meta name="description" content="HiQ-Crawl: an RL-based hierarchical framework for humanoid quadrupedal crawling and scalable confined-space traversal. Under double-anonymous review." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Under double-anonymous review</p>
+      <h1 class="brand">HiQ-Crawl</h1>
+      <p class="tagline">
+        RL-based Hierarchical Humanoid Quadrupedal Crawling for Scalable Confined Space Traversal
+      </p>
+      <div class="cta-row">
+        <button type="button" class="btn btn-primary" disabled aria-disabled="true" title="Paper PDF will be linked after submission materials are ready">
+          Paper
+          <span class="btn-note">Coming soon</span>
+        </button>
+        <button type="button" class="btn btn-secondary" disabled aria-disabled="true" title="Code will be released open-source upon acceptance">
+          Code
+          <span class="btn-note">Open-source upon acceptance</span>
+        </button>
+      </div>
+    </div>
+    <figure class="hero-visual reveal-delay">
+      <img
+        src="assets/images/teaser_HiQ_final.png"
+        alt="HiQ-Crawl teaser: Unitree G1 transitions between bipedal walking and quadrupedal crawling under low-clearance obstacles"
+        width="1920"
+        height="720"
+      />
+    </figure>
+  </header>
+
+  <main>
+    <section class="section abstract-section" id="abstract">
+      <div class="section-inner">
+        <h2>Abstract</h2>
+        <p>
+          Humanoid locomotion in confined spaces requires continuous height adaptation across multiple locomotion modes, yet most existing approaches remain limited to height-adjustable bipedal walking. We present HiQ-Crawl, an RL-based hierarchical framework that enables a Unitree G1 humanoid to traverse height-constrained environments through variable-height bipedal walking and quadrupedal crawling. The learned policies continuously regulate body height over complementary ranges, from 1.27–0.50&nbsp;m in bipedal locomotion to 0.50–0.30&nbsp;m in crawling, substantially extending the minimum navigable clearance. To address the contact-rich dynamics and unmodeled disturbances inherent in quadrupedal crawling, we adapt a history-conditioned latent representation that implicitly captures terrain and interaction context from proprioceptive observations, improving terrain adaptation and sim-to-real robustness. A bidirectional transition policy connects crouched bipedal locomotion and quadrupedal crawling, enabling smooth and stable switching despite large kinematic and contact discontinuities. We further integrate these skills with an adapted model-based planner that converts LiDAR point clouds into collision-free three-dimensional paths and locomotion commands, including proactive height targets. Simulation studies, ablations, and real-world experiments demonstrate accurate height and velocity tracking, robust traversal over complex terrain, reliable mode transitions, and autonomous navigation through highly confined spaces. HiQ-Crawl provides a scalable locomotion framework for deploying humanoid robots in complex, low-clearance environments.
+        </p>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method">
+      <div class="section-inner">
+        <h2>Method</h2>
+        <p class="section-lead">
+          Hierarchical control for confined-space traversal: bidirectional mode transitions, history-conditioned latent policies, and LiDAR-driven planning.
+        </p>
+        <figure class="arch-figure">
+          <img
+            src="assets/images/HiQ_final_main_seq.png"
+            alt="HiQ-Crawl system overview with bidirectional transition, latent actor-critic training, high-level planner, and real-world crawling"
+            width="1920"
+            height="1080"
+          />
+          <figcaption>
+            Overview of HiQ-Crawl. (A) A bidirectional motion-tracking policy connects crouched bipedal locomotion and quadrupedal crawling.
+            (B) The history-conditioned asymmetric actor–critic encodes proprioceptive histories and uses privileged information only for critic training.
+            (C) A model-based planner converts LiDAR point clouds into locomotion and height commands.
+            (D) Real-world trials demonstrate crawling through consecutive low-clearance obstacles.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section demos-section" id="demos">
+      <div class="section-inner">
+        <h2>Demos</h2>
+        <p class="section-lead">
+          Real-world deployments on the Unitree G1 across whole-trajectory navigation, variable-height walking, crawling, and scalable confined traversal.
+        </p>
+        <div class="demo-grid">
+          <article class="demo-item">
+            <h3>Whole Trajectory</h3>
+            <div class="video-wrap">
+              <video controls muted loop playsinline preload="metadata">
+                <source src="assets/videos/whole_trajectory_demo1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="demo-item">
+            <h3>Bipedal Walking</h3>
+            <div class="video-wrap">
+              <video controls muted loop playsinline preload="metadata">
+                <source src="assets/videos/bipedal_demo1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="demo-item">
+            <h3>Quadrupedal Crawling</h3>
+            <div class="video-wrap">
+              <video controls muted loop playsinline preload="metadata">
+                <source src="assets/videos/crawling_demo1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="demo-item">
+            <h3>Scalable Confined Traversal</h3>
+            <div class="video-wrap">
+              <video controls muted loop playsinline preload="metadata">
+                <source src="assets/videos/scalable_demo.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Under double-anonymous review. Author identities withheld until acceptance.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const nodes = document.querySelectorAll(".reveal, .reveal-delay, .demo-item, .arch-figure, .abstract-section p");
+      if (reduce || !("IntersectionObserver" in window)) {
+        nodes.forEach(function (el) { el.classList.add("is-visible"); });
+        return;
+      }
+      const io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+      );
+      nodes.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
