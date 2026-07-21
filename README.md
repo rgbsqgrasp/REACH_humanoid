@@ -1,4 +1,4 @@
-# HiQ-Crawl — Anonymous Project Page
+# REACH — Anonymous Project Page
 
 Static GitHub Pages site for double-anonymous review. Contains no author names, affiliations, emails, or institutional branding.
 
@@ -17,14 +17,14 @@ Use a dedicated anonymous GitHub account. Do not link personal identity, email, 
 
 ### Option A — repo root (recommended)
 
-1. Create a new public repository on the anonymous account (e.g. `hiq-crawl`).
+1. Create a new public repository on the anonymous account (e.g. `reach`).
 2. Copy **the contents** of this `website/` folder into the repository root (so `index.html` is at `/`):
 
    ```bash
    # from this website/ directory
    git init
    git add .
-   git commit -m "Add anonymous HiQ-Crawl project page"
+   git commit -m "Add anonymous REACH project page"
    git branch -M main
    git remote add origin https://github.com/<anonymous-user>/<repo>.git
    git push -u origin main
