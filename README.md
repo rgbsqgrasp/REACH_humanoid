@@ -7,7 +7,7 @@ Static GitHub Pages site for double-anonymous review. Contains no author names, 
 - `index.html` — project page (teaser, abstract, method figure, demos)
 - `styles.css` — layout and styling
 - `assets/images/` — teaser and architecture figures
-- `assets/videos/` — real-world demo clips (~55&nbsp;MB total)
+- `assets/videos/` — project overview clip and real-world demo clips (~145&nbsp;MB total)
 
 Paper and Code buttons are placeholders until the camera-ready / open-source release.
 
@@ -57,4 +57,4 @@ Open `http://localhost:8080`.
 
 ## Size note
 
-Demo videos are ~55&nbsp;MB combined. GitHub recommends keeping repositories under ~1&nbsp;GB; individual files under 100&nbsp;MB. Current assets are within those soft limits. For larger future clips, consider Git LFS or external hosting.
+Demo videos plus the project overview clip are ~145&nbsp;MB combined. GitHub recommends keeping repositories under ~1&nbsp;GB; individual files under 100&nbsp;MB. Current assets are within those soft limits. For larger future clips, consider Git LFS or external hosting.

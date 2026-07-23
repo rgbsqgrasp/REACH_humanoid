@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260719c" />
+  <link rel="stylesheet" href="styles.css?v=20260723a" />
 </head>
 <body>
 
@@ -21,7 +21,11 @@
         An RL-based Hierarchical Humanoid Crawling Framework for Scalable Confined Space Traversal
       </p>
       <div class="cta-row">
-        <button type="button" class="btn btn-primary" disabled aria-disabled="true" title="Paper PDF will be linked after submission materials are ready">
+        <a class="btn btn-primary" href="#video">
+          Video
+          <span class="btn-note">Project overview</span>
+        </a>
+        <button type="button" class="btn btn-secondary" disabled aria-disabled="true" title="Paper PDF will be linked after submission materials are ready">
           Paper
           <span class="btn-note">Coming soon</span>
         </button>
@@ -48,6 +52,22 @@
         <p>
           Humanoid locomotion in confined spaces requires continuous height adaptation across multiple locomotion modes, yet most existing approaches remain limited to height-adjustable bipedal walking. We present REACH, an RL-based hierarchical framework that enables a Unitree G1 humanoid to traverse height-constrained environments through variable-height bipedal walking and quadrupedal crawling. The learned policies regulate body height over complementary command ranges of 1.27–0.50&nbsp;m in bipedal locomotion and 0.50–0.20&nbsp;m in crawling, extending traversal beyond the clearance limits of crouched walking. To address contact-rich crawling dynamics, we employ a history-conditioned latent representation that captures terrain and interaction context from proprioceptive observations. A bidirectional transition policy further connects crouched bipedal locomotion and crawling across large kinematic and contact discontinuities. These skills are integrated with a LiDAR-based planner that converts point clouds into collision-free three-dimensional paths and locomotion commands, including proactive height targets. Simulation studies, ablations, and real-world experiments demonstrate accurate height and velocity tracking, robust terrain traversal, reliable mode transitions and confined-space traversal with the proposed pipeline.
         </p>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="section-inner">
+        <h2>Project Video</h2>
+        <p class="section-lead">
+          Overview of REACH: hierarchical locomotion, mode transitions, and real-world confined-space traversal on the Unitree G1.
+        </p>
+        <figure class="featured-video">
+          <div class="video-wrap video-wrap-featured">
+            <video controls playsinline preload="metadata" poster="assets/images/teaser_reach.png">
+              <source src="assets/videos/reach_overview.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </figure>
       </div>
     </section>
 
@@ -125,7 +145,7 @@
   <script>
     (function () {
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const nodes = document.querySelectorAll(".reveal, .reveal-delay, .demo-item, .arch-figure, .abstract-section p");
+      const nodes = document.querySelectorAll(".reveal, .reveal-delay, .demo-item, .arch-figure, .featured-video, .abstract-section p");
       if (reduce || !("IntersectionObserver" in window)) {
         nodes.forEach(function (el) { el.classList.add("is-visible"); });
         return;
